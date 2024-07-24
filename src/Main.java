@@ -8,7 +8,7 @@ public class Main {
 //        System.out.println(oDobro.retornaODobro());
 
         Musica trilha1 = new Musica();
-        trilha1.titulo = "Princesa";
+        trilha1.titulo = "Princesa teste";
         trilha1.artista = "Amado Batista";
         trilha1.anoLancamento = 1991;
         trilha1.avaliacao = 4;
