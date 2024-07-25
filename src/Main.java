@@ -44,7 +44,7 @@ public class Main {
         aluno.nome = "João";
         aluno.endereco = "Rua A, 123";
         aluno.cpf = "123.456.789-00";
-        aluno.dataNascimento = "1983/01/15"; // exemplo de data de nascimento no formato yyyy-MM-dd
+        aluno.dataNascimento = "1983/01/15";
         aluno.exibeDados();
 
     }
