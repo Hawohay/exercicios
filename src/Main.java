@@ -1,12 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        Aluno aluno1 = new Aluno();
-        aluno1.setNome("Hawohay");
-        aluno1.avaliarAluno(8);
-        aluno1.avaliarAluno(8);
-        aluno1.exibeDados();
-        aluno1.exibeMedia();
+        Livro livro1 = new Livro();
+        String autor = livro1.getAutor();
+        String titulo = livro1.getTitulo();
+
+        System.out.println("Autor: " + autor + "<> " + "Título: " + titulo);
+
+        livro1.setAutor("Hawohay");
+        livro1.setTitulo("Codando em Java");
+
+        livro1.exibirDetalhes();
 
     }
 }
