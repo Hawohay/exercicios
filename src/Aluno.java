@@ -4,10 +4,37 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 public class Aluno {
-    String nome;
+    private String nome;
+    private double avaliacao;
     String endereco;
     String cpf;
     String dataNascimento;
+    int numAvaliacoes;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getNota() {
+        return avaliacao;
+    }
+
+    public void setNota(double avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+
+    public void avaliarAluno(double nota){
+        avaliacao += nota;
+        numAvaliacoes++;
+    }
+
+    public double mediaAvaliacoes(){
+        return avaliacao / numAvaliacoes;
+    }
 
     public void exibeDados() {
         System.out.println("Nome do aluno: " + nome);
@@ -15,6 +42,10 @@ public class Aluno {
         System.out.println("Número do cpf do aluno: " + cpf);
         System.out.println("Data de nascimento do aluno: " + formataData(dataNascimento));
         System.out.println("Idade do aluno: " + calculaIdade() + " anos");
+    }
+
+    public void exibeMedia(){
+        System.out.println("A média das notas é: " + mediaAvaliacoes());
     }
 
     public String formataData(String dataNascimento) {
