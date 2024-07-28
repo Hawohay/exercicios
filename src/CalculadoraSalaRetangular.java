@@ -2,21 +2,16 @@
 public class CalculadoraSalaRetangular implements CalculoGeometrico {
 
     private double altura;
-    private double largura;
+    private double base;
     private double comprimento;
 
-    public CalculadoraSalaRetangular(double largura, double comprimento) {
-        this.largura = largura;
-        this.comprimento = comprimento;
+    @Override
+    public double calcularArea(double base, double altura) {
+        return base * altura;
     }
 
     @Override
-    public double calcularArea() {
-        return largura * comprimento;
-    }
-
-    @Override
-    public double calcularPerimetro() {
-        return 2 * (largura + altura);
+    public double calcularPerimetro(double base, double altura) {
+        return 2 * (base + altura);
     }
 }
