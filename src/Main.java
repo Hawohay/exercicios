@@ -3,8 +3,12 @@
 public class Main {
     public static void main(String[] args) {
 
-        TabuadaMultiplicacao multiplicacao = new TabuadaMultiplicacao();
+        ConversorTemperaturaPadrao conversor = new ConversorTemperaturaPadrao();
 
-        multiplicacao.mostrarTabuada(7);
+        conversor.celsiusParaFahrenheit(27);
+
+        conversor.fahrenheitParaCelsius(80.6);
+
+
     }
 }
