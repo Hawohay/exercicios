@@ -1,16 +1,8 @@
-public class Livro implements Calculavel {
-
-    private String titulo = "";
-    private String autor = "";
+public class ProdutoFisico implements Calculavel {
 
     double valorSemDesconto;
-    double desconto = 0.4;
+    double desconto = 0.1;
     double precoFinal;
-
-    public void exibirDetalhes() {
-        System.out.println("Título do livro: " + titulo);
-        System.out.println("Autor do livro: " + autor);
-    }
 
     public double getValorSemDesconto() {
         return valorSemDesconto;
@@ -34,22 +26,6 @@ public class Livro implements Calculavel {
 
     public void setPrecoFinal(double precoFinal) {
         this.precoFinal = precoFinal;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     @Override

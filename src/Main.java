@@ -3,12 +3,13 @@
 public class Main {
     public static void main(String[] args) {
 
-        ConversorTemperaturaPadrao conversor = new ConversorTemperaturaPadrao();
+        Livro livro1 = new Livro();
+        livro1.calcularPrecoFinal(100);
+        System.out.println(livro1.getPrecoFinal());
 
-        conversor.celsiusParaFahrenheit(27);
-
-        conversor.fahrenheitParaCelsius(80.6);
-
+        ProdutoFisico produto1 = new ProdutoFisico();
+        produto1.calcularPrecoFinal(100);
+        System.out.println(produto1.getPrecoFinal());
 
     }
 }
