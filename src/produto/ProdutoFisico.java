@@ -1,5 +1,7 @@
 package produto;
 
+import calculo.Calculavel;
+
 public class ProdutoFisico implements Calculavel {
 
     double valorSemDesconto;

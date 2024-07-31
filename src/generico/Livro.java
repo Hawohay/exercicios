@@ -1,5 +1,7 @@
 package generico;
 
+import calculo.Calculavel;
+
 public class Livro implements Calculavel {
 
     private String titulo = "";
