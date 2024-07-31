@@ -3,9 +3,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Main {
+public class MainProduto {
     public static void main(String[] args) {
-
 
         // Criação da lista de objetos Produtos
         ArrayList<Produto> produtos = new ArrayList<>();
@@ -30,13 +29,11 @@ public class Main {
             e.printStackTrace();
         }
 
-
         // Adição dos objetos Pessoa à lista
         produtos.add(produto1);
         produtos.add(produto2);
         produtos.add(produto3);
         produtos.add(produtoPerecivel1);
-
 
         System.out.println();
 
