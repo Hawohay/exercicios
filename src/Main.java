@@ -1,39 +1,53 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Criação da lista de objetos Pessoa
-        ArrayList<Pessoa> pessoas = new ArrayList<>();
 
-        // Criação de objetos Pessoa
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("Hawohay");
-        pessoa1.setIdade(41);
+        // Criação da lista de objetos Produtos
+        ArrayList<Produto> produtos = new ArrayList<>();
 
-        Pessoa pessoa2 = new Pessoa();
-        pessoa2.setNome("Lúcia");
-        pessoa2.setIdade(37);
+        // Criação de objetos Produto
+        Produto produto1 = new Produto("Sabão em pó", 1.5, 10);
 
-        Pessoa pessoa3 = new Pessoa();
-        pessoa3.setNome("Mariana");
-        pessoa3.setIdade(2);
+
+        Produto produto2 = new Produto("arroz", 39.90, 5);
+
+
+        Produto produto3 = new Produto("pasta de dente", 7.57, 20);
+
+        // Criação de objeto ProdutoPerecivel
+        ProdutoPerecivel produtoPerecivel1 = new ProdutoPerecivel("Manteiga", 7.0, 12);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            Date dataValidade = sdf.parse("01/01/2025");
+            produtoPerecivel1.setDataValidade(dataValidade);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
 
         // Adição dos objetos Pessoa à lista
-        pessoas.add(pessoa1);
-        pessoas.add(pessoa2);
-        pessoas.add(pessoa3);
+        produtos.add(produto1);
+        produtos.add(produto2);
+        produtos.add(produto3);
+        produtos.add(produtoPerecivel1);
+
 
         System.out.println();
 
-        for (Pessoa pessoa : pessoas) {
-            System.out.println(pessoa);
+        for (Produto produto : produtos) {
+            System.out.println(produto);
         }
 
         System.out.println();
-        System.out.println("Quantidade de pessoas na lista: " + pessoas.size());
+        System.out.println("Quantidade de produtos na lista: " + produtos.size());
         System.out.println("-------------------------------------------------");
-        System.out.println("Primeira pessoa da lista: " + pessoas.get(0));
+        System.out.println("Primeira pessoa da lista: " + produtos.get(2));
 
     }
 }
