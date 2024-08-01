@@ -11,6 +11,7 @@ import java.util.Date;
 public class MainProduto {
     public static void main(String[] args) {
 
+
         // Criação da lista de objetos Produtos
         ArrayList<Produto> produtos = new ArrayList<>();
 
@@ -42,9 +43,15 @@ public class MainProduto {
 
         System.out.println();
 
+        double soma = 0.0;
+
         for (Produto produto : produtos) {
             System.out.println(produto);
+            soma += produto.getPreco();
         }
+
+        double media = soma / produtos.size();
+        System.out.println("A média de preços é: " + media);
 
         System.out.println();
         System.out.println("Quantidade de produtos na lista: " + produtos.size());
