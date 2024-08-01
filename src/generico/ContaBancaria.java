@@ -7,6 +7,12 @@ public class ContaBancaria {
     private double saldo = 0;
     public String titular;
 
+    public ContaBancaria(int numeroDaConta, double saldo, String titular) {
+        this.numeroDaConta = numeroDaConta;
+        this.saldo = saldo;
+        this.titular = titular;
+    }
+
     public int getNumeroDaConta() {
         return numeroDaConta;
     }
@@ -23,8 +29,8 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public void depositar(double valor){
-        if (valor > 0){
+    public void depositar(double valor) {
+        if (valor > 0) {
             saldo += valor;
             System.out.println("Depósito no valor de R$" + valor + " Realizado com sucesso!");
 
@@ -33,8 +39,8 @@ public class ContaBancaria {
         }
     }
 
-    public void sacar(double valor){
-        if (saldo > 0 && valor > 0){
+    public void sacar(double valor) {
+        if (saldo > 0 && valor > 0) {
             saldo -= valor;
             System.out.println("Saque no valor de R$" + valor + " Realizado com sucesso!");
 
@@ -43,7 +49,12 @@ public class ContaBancaria {
         }
     }
 
-    public void consultarSaldo(){
+    public void consultarSaldo() {
         System.out.println("Saldo da conta: R$" + saldo);
+    }
+
+    @Override
+    public String toString() {
+        return "Número da conta: " + numeroDaConta + " | " + "Títular da conta: " + titular + " | " + "Saldo: " + saldo;
     }
 }
