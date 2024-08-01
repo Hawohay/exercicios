@@ -1,6 +1,7 @@
 package generico;
 
 public class Lista {
+
     private String name;
     private int age;
 
