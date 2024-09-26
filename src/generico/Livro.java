@@ -10,6 +10,12 @@ public class Livro implements Calculavel {
     double valorSemDesconto;
     double desconto = 0.4;
     double precoFinal;
+    private Editora editora;
+
+    public Livro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
 
     public void exibirDetalhes() {
         System.out.println("Título do livro: " + titulo);
@@ -56,8 +62,16 @@ public class Livro implements Calculavel {
         this.autor = autor;
     }
 
+
     @Override
     public void calcularPrecoFinal(double valorSemDesconto) {
         precoFinal = valorSemDesconto - (valorSemDesconto * desconto);
     }
+
+    @Override
+    public String toString() {
+        return "Livro[titulo=" + titulo + ", autor=" + autor + ", " + editora.getNome() + ", " + editora.getCidade() + "]";
+    }
+
+
 }
