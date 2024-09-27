@@ -12,9 +12,10 @@ public class Livro implements Calculavel {
     double precoFinal;
     private Editora editora;
 
-    public Livro(String titulo, String autor) {
+    public Livro(String titulo, String autor, Editora editora) {
         this.titulo = titulo;
         this.autor = autor;
+        this.editora = editora;
     }
 
     public void exibirDetalhes() {
@@ -62,6 +63,13 @@ public class Livro implements Calculavel {
         this.autor = autor;
     }
 
+    public Editora getEditora() {
+        return editora;
+    }
+
+    public void setEditora(Editora editora) {
+        this.editora = editora;
+    }
 
     @Override
     public void calcularPrecoFinal(double valorSemDesconto) {
